@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:padding="@dimen/activity_vertical_margin"
+    android:elevation="@dimen/activity_vertical_margin"
+    android:background="@drawable/circle"
+    android:id="@+id/widget"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_margin="2pt"
+        android:id="@+id/tvEng"
+        android:text="@string/english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+        <TextView
+            android:layout_margin="2pt"
+        android:id="@+id/tvRus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/russian"
+            android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+            android:textStyle="bold"/>
+
+</LinearLayout>

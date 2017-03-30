@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Transletor</string>
+    <string name="action_settings">Settings</string>
+    <string name="filter_title">You Translate</string>
+    <string name="ok_button">Add</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="nothing_found">Nothing found</string>
+    <string name="offline_mode">Online mode unavailable</string>
+    <string name="online_mode">Online mode available</string>
+    <string name="download_complite">Download complete</string>
+    <string name="download_dictionary">Download dictionary</string>
+    <string name="download_progress">Download in progress</string>
+    <string name="translating">Translating...</string>
+    <string name="error">Something wrong</string>
+    <string name="russian">Russian</string>
+    <string name="english">English</string>
+    <string name="translate">Translate</string>
+    <string name="add_new_translate">Add new translate</string>
+    <string name="empry_value">Can\'t be empty</string>
+    <string name="must_rus">Must be russian</string>
+    <string name="must_eng">Must be english</string>
+    <string name="don_t_worry_loading_dictionary">Don\'t worry, loading offline dictionary, it\'s may stuck for few seconds</string>
+    <string name="textspeechnotsupport">Text to speech not support</string>
+    <string name="search">Search</string>
+    <string name="auth_fail">Authentication failed.</string>
+</resources>

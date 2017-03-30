@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/programer/.android/build-cache/1665d77180b4822050f5df2f7754ead57a2f9d64/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-8ed0af4c07d2e92015bbcf001178904cc7090dfc.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/f688cf5202f8e255d5013ae0a6ff6cd60887142d/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-58ffca3ad55cbe0fd2f04d54dadb9dd98e6f5222.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/add46a4653c05002c8be9fc029293eccf9eab532/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-9ead8207398f1b3c75115ad959274aa9c18415e4.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/4c7baa82f8c8f6b65af11e6dbb3bd1c6a58957a1/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-e228337e04feb19b2574cad8e7241ba8b4eff6f8.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/18401f107fe2e584c14af36ea689861ef8601a13/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-28cb14d3001196278f903535f1ab501bb4d143f5.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/cd0af761cb2cfb96673b5ff2858ce4535c51d807/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-d469cc97d5a4ddac54903188695528292ce5aae8.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/f82a7f0daaebf19dbeed2a682b9dcc7d63db57c2/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-22ac9d34cddc43a17a5ded4c0b7ceef113f78a03.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/523300bf8bbcdc9f7ee072e2d5663dbc5601ded9/output/jars/libs/internal_impl-25.0.1.jar"
+        revision="25.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/internal_impl-25.0.1-e45c4a4ebef6302d89cbe4422ef634c330e24933.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/f82a7f0daaebf19dbeed2a682b9dcc7d63db57c2/output/jars/libs/internal_impl-25.0.1.jar"
+        revision="25.0.2"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/internal_impl-25.0.1-82d713f5a225783e4778f81c808e2e2bcc3ffc66.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/aea58a3150e12f707b4d30e03f691e6613e00d5b/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-54d81e262de5b2994ac8a0f6de06796a05f924b5.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/b1ad2724b1e1b462cb7f0e1cd375571dd29520f7/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-2e2087591323a9e7a318a91e05197d2ef868abff.jar" />
+    </item>
+    <item
+        jar="/home/programer/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.4.1/381fc1096ba65040d8e80ea43b2e1d9bad02345e/logging-interceptor-3.4.1.jar"
+        revision="25.0.2"
+        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/logging-interceptor-3.4.1-6cecbfa7f967a47f460dfcd6e94e6464af65f538.jar" />
+    </item>
+    <item
+        jar="/home/programer/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/support-annotations-25.2.0-86c355c2e9159ac211dfe169db59702949fd48fb.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/97728686e321b6d0ca5b805fdfb52e12f3ee95f3/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-1985ba367d37eeb6432b1799321d9281dda1a85b.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/6b24e09ed86e7955477981d5f0f94c3da3ed567d/output/jars/libs/internal_impl-25.0.1.jar"
+        revision="25.0.2"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/internal_impl-25.0.1-3483974089f09f3ba9fcf64021ef4c1bc93b769b.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/fa9f7b39122e2fadc9198abae22131d36a9b152c/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-960f4d943c15a7dc8be129f02132eb59b5329153.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/ed26e5b79917caf72fcf22056fdccb64d7031638/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-851e0348734eb4375f95a656f5c91aac4f5ccdb6.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/8c808db9fc20b1cf75beb11edde237b1eea6d995/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="d314151688a31cdcaddc322e152e12365753ae03">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-19b264699f3a0ab20206939e2da55f5b9808852e.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/9c67cc31374d5a24eaf39fe725a54791deeca819/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-254610fc1444aa80cb4b3f3243889224d1a6e6f5.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/cd377b3e1785f7fe7d04ad578099efda8ae4a120/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-850443254b797ac90b309b2288275c38e3ab1658.jar" />
+    </item>
+    <item
+        jar="/home/programer/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        revision="25.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/converter-gson-2.1.0-565c1d80916f1e2e55794ac1658c8e75a4f12d9e.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/e3a42e13df97ab7bb9e2836de128c920549f51a3/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-109ac8d5427ca2b90be79ccd3f703b8b87775a27.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/523300bf8bbcdc9f7ee072e2d5663dbc5601ded9/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-c47a277e17a30fe780329229f0ef5d59d12a6fbd.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/d56f0ae245797b9f2051e27b5cf3d19a4706833a/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-8b9c7d9315b15097d7fbd9e23eef9fd741f8dc2e.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/ae0b7ad823661f4399eee8fa97a9a979f460b91c/output/jars/libs/internal_impl-25.0.1.jar"
+        revision="25.0.2"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/internal_impl-25.0.1-6656491ab735e1bc1fcb14c0ac45ba1a2105782a.jar" />
+    </item>
+    <item
+        jar="/home/programer/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        revision="25.0.2"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/okhttp-3.4.1-f5f3bb6c8904ae3a23413eed7339ba210e954df0.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/c79ae700ddce7b2942d03c174d0e0c00f8f17f21/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-c07c343d3bb470810a40f6623674b3420a509adf.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/2135389e118516f114f6999a8046ee00a7fc1525/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-2b3deb3b95bc849e4b2b0d92bdf6b7ddcce5f550.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/df92850f43ce2c3987f844691a6046098b2b5f0e/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-f9b354dbedf96e1f39430b6246e549fd1fb53db0.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/6b24e09ed86e7955477981d5f0f94c3da3ed567d/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-2b949cb74afd644b433ac267a5ad390cfe97f3e4.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/0525072ad9e9c465f4b60c83c40f50a4bf27871f/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-a8c012573111c116c500e71437d89c59def2ce84.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/ae0b7ad823661f4399eee8fa97a9a979f460b91c/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-177cdbf228948469f8f932353cfb6e233cd7222e.jar" />
+    </item>
+    <item
+        jar="/home/programer/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar"
+        revision="25.0.2"
+        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/activeandroid-3.1.0-SNAPSHOT-6e08fd53d782c3e5784d887aee267879d3cc8578.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/f8d5d813aba64a43fb208f6f02df0617f0b05882/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-1caa74feec36c17e8f523349cd0ec8f2e397da50.jar" />
+    </item>
+    <item
+        jar="/home/programer/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        revision="25.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/retrofit-2.1.0-d592c55a2e21398afd01a29f6b3e01b951d0f964.jar" />
+    </item>
+    <item
+        jar="/home/programer/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/gson-2.7-607fa32a2adbdb893a4b83eea285d5649885b5a0.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/4c7baa82f8c8f6b65af11e6dbb3bd1c6a58957a1/output/jars/libs/internal_impl-25.0.1.jar"
+        revision="25.0.2"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/internal_impl-25.0.1-9edb5eec4377bd08423a553dbbf5379f04439db4.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/39828d0786e1fb9f0504fb205d5aa2213fb9e0ee/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-defe716d641c9244c6747f90f7bae0feb5c88e10.jar" />
+    </item>
+    <item
+        jar="/home/programer/.android/build-cache/bdbfc3ed8c766b4d1384a2e8162d0a04eb3038a4/output/jars/classes.jar"
+        revision="25.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/classes-baec4e3b67b21cc94b9b1bef3c8cb79a46419cd8.jar" />
+    </item>
+    <item
+        jar="/home/programer/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        revision="25.0.2"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/programer/Documents/Projects/transletor/Transletor/app/build/intermediates/transforms/preJackPackagedLibraries/free/debug/jars/8000/1f/okio-1.9.0-12d20d9fc8342788273135456820dd0babe82270.jar" />
+    </item>
+
+</items>
