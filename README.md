@@ -10,8 +10,8 @@ There is a voice of English words by their click *.
 <body>
 
 
-<iframe width="420" height="345" src="https://youtu.be/yEilMebExQ8 ">
-</iframe>
+https://youtu.be/yEilMebExQ8
+
 
 https://play.google.com/store/apps/details?id=dashika.cf.transletor
 
