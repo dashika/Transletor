@@ -12,7 +12,7 @@ There is a voice of English words by their click *.
 
 Video review |Image
 -------------|----------------- 
- [![VIDEO](https://lh5.googleusercontent.com/matIZ85psHxxPXjouEK04d4l2ytft5lm1oo50X3OmR7EagODABTahJ7LKjI9F0IQbOartj3ueV9Mu7I=w1221-h785)](https://www.youtube.com/embed/yEilMebExQ8) |  ![](https://lh4.googleusercontent.com/RqNWFxP_n2BNK74oQpAnwoSPcLPEOCsVn5m3e494tYrZmBJ6CwuxWhQhcnnhJ1LxTOILf8gj4hhVI4Q=w1393-h957)
+ [![](https://github.com/dashika/Transletor/blob/master/image/Screenshot_2017-03-31-09-58-28.png)](https://www.youtube.com/embed/yEilMebExQ8) |  ![](https://github.com/dashika/Transletor/blob/master/image/Screenshot_2017-03-31-09-58-31.png)
 
 #### Used libraries
 ---
