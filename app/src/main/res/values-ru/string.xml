@@ -23,4 +23,6 @@
     <string name="don_t_worry_loading_dictionary">Не переживайте, загружается оффлайн словарь, может зависнуть на пару секунд</string>
     <string name="textspeechnotsupport">Text to speech не поддерживается</string>
     <string name="search">Поиск</string>
+    <string name="auth_fail">Авторизация провалилась.</string>
+    <string name="banner_ad_unit_id">ca-app-pub-1089188969967664/6110850437</string>
 </resources>

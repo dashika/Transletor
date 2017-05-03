@@ -16,6 +16,10 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import dashika.cf.transletor.Model.English;
 import dashika.cf.transletor.Model.Russian;
 import dashika.cf.transletor.Util.Language;
@@ -31,6 +35,12 @@ public class MainActivity extends BaseActivity implements SearchView.OnQueryText
         super.onCreate(savedInstanceState);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-1089188969967664~4634117233");
+        AdView mAdView = (AdView) findViewById(R.id.transletor_banner);
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        mAdView.loadAd(adRequest);
 
         mainActivityPresenter = new MainActivityPresenter(this);
 

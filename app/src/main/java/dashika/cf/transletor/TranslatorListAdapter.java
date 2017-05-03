@@ -3,12 +3,14 @@ package dashika.cf.transletor;
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Locale;
 
 import dashika.cf.transletor.Model.Russian;
 

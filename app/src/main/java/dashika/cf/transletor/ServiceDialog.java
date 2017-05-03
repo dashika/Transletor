@@ -15,13 +15,17 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import dashika.cf.transletor.Model.English;
 import dashika.cf.transletor.Model.Russian;
@@ -32,7 +36,7 @@ import dashika.cf.transletor.Util.NetworkStateReceiver;
  * Created by dashika on 03/03/17.
  */
 
-public class ServiceDialog extends Activity implements NetworkStateReceiver.NetworkStateReceiverListener {
+public class ServiceDialog extends Activity implements NetworkStateReceiver.NetworkStateReceiverListener{
 
     private NetworkStateReceiver networkStateReceiver;
     protected boolean Online;
@@ -133,6 +137,7 @@ public class ServiceDialog extends Activity implements NetworkStateReceiver.Netw
         mainActivityPresenter.SetAdapter(transletorList);
 
 
+
         ImageButton exit = (ImageButton) view.findViewById(R.id.exit);
         exit.setOnClickListener(view1 -> {
             dialog.dismiss();
@@ -165,7 +170,8 @@ public class ServiceDialog extends Activity implements NetworkStateReceiver.Netw
         super.onDestroy();
     }
 
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         super.onBackPressed();
         finish();
     }
@@ -173,15 +179,15 @@ public class ServiceDialog extends Activity implements NetworkStateReceiver.Netw
     public boolean onQueryTextSubmit(String query) {
         boolean notCyrillic = query.charAt(0) < 1000;
         if (Online)
-            mainActivityPresenter.callTranslator(ServiceDialog.this, query, notCyrillic ? Language.ENGLISH : Language.RUSSIAN, notCyrillic ? Language.RUSSIAN : Language.ENGLISH);
+            mainActivityPresenter.callTranslator(ServiceDialog.this,query, notCyrillic ? Language.ENGLISH : Language.RUSSIAN, notCyrillic ? Language.RUSSIAN : Language.ENGLISH);
         else {
             try {
                 if (notCyrillic) {
                     String res = English.getByOrth(query).russian.quote;
-                    mainActivityPresenter.showDialog(ServiceDialog.this, Language.ENGLISH, query, res, false);
+                    mainActivityPresenter.showDialog(ServiceDialog.this,Language.ENGLISH, query, res, false);
                 } else {
                     String res = Russian.getByQuote(query).english.orth;
-                    mainActivityPresenter.showDialog(ServiceDialog.this, Language.RUSSIAN, query, res, false);
+                    mainActivityPresenter.showDialog(ServiceDialog.this,Language.RUSSIAN, query, res, false);
                 }
             } catch (NullPointerException e) {
                 Snackbar.make(transletorList, R.string.nothing_found, Snackbar.LENGTH_LONG).show();
