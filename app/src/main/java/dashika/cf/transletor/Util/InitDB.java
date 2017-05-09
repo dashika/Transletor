@@ -2,6 +2,9 @@ package dashika.cf.transletor.Util;
 
 import android.app.NotificationManager;
 import android.content.Context;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteConstraintException;
+import android.database.sqlite.SQLiteException;
 import android.os.AsyncTask;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
@@ -65,21 +68,10 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
         mNotifyManager.notify(id, mBuilder.build());
 
         if (progress[0] == 100) {
-            ActiveAndroid.beginTransaction();
-            try {
-                for (Russian russian : result1) {
-                    russian.save();
-                }
-                ActiveAndroid.setTransactionSuccessful();
-            } finally {
-                ActiveAndroid.endTransaction();
-
-            }
-
             mBuilder.setContentText(context.getString(R.string.download_complite))
                     .setProgress(0, 0, false);
             mNotifyManager.notify(id, mBuilder.build());
-            taskDelegateInitDB.GetResult(null);
+            taskDelegateInitDB.GetResult(result1);
         }
     }
 
@@ -91,12 +83,16 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
 
     @Override
     protected Void doInBackground(Void... voids) {
+        boolean itsAdmin = !TransletorApplication.getUser().getUid().equals(context.getString(R.string.admin));
         GetWords(context.getString(R.string.admin), result -> {
+            for (Russian russian : result) {
+                russian.itsCustom = itsAdmin;
+            }
                 this.result1.addAll(result);
                 publishProgress(50);
 
 
-            if (!TransletorApplication.getUser().getUid().equals(context.getString(R.string.admin))) {
+            if (itsAdmin) {
                 GetWords(TransletorApplication.getUser().getUid(), result1 -> {
                     this.result1.addAll(result1);
                     publishProgress(100);

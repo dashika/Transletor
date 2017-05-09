@@ -16,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.activeandroid.ActiveAndroid;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,13 +59,24 @@ class MainActivityPresenter {
 
     void InitDb(Activity activity, LinearLayout progressBar) {
         //if DB is empty - that's mean first run - we need init offline DB
-        if (Russian.count() < 2287) {
+        if (Russian.count() < (2286+140)) {
             if (initDB == null) {
                 progressBar.setVisibility(View.VISIBLE);
                 initDB = new InitDB(activity, result -> {
                     activity.runOnUiThread(() -> {
+                        ActiveAndroid.beginTransaction();
+                        try {
+                            for (Russian russian : result) {
+
+                                russian.save();
+
+                            }
+                            ActiveAndroid.setTransactionSuccessful();
+                        } finally {
+                            ActiveAndroid.endTransaction();
+
+                        }
                         onQueryTextChange("");
-                      //  duble = Russian.getAll();
                     });
                     progressBar.setVisibility(View.GONE);
                 });

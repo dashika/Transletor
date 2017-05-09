@@ -37,6 +37,11 @@ public class Russian extends Model {
                 .executeSingle();
     }
 
+    public static boolean exist(long id)
+    {
+        return new Select().from(Russian.class).where("_id=?",id).executeSingle() == null;
+    }
+
     public Russian() {
         super();
     }
