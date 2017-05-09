@@ -19,7 +19,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import dashika.cf.transletor.Model.English;
 import dashika.cf.transletor.Model.Russian;
 import dashika.cf.transletor.Model.Yandex.Example;
 import dashika.cf.transletor.Util.ApiKeys;
@@ -58,7 +57,7 @@ class MainActivityPresenter {
 
     void InitDb(Activity activity, LinearLayout progressBar) {
         //if DB is empty - that's mean first run - we need init offline DB
-        if (Russian.count() < 2285) {
+        if (Russian.count() < 2287) {
             if (initDB == null) {
                 progressBar.setVisibility(View.VISIBLE);
                 initDB = new InitDB(activity, result -> {
@@ -105,12 +104,9 @@ class MainActivityPresenter {
                 et_rus.setError(activity.getString(R.string.must_rus));
                 return;
             }
-            English eng = new English();
-            eng.orth = ceng;
-            eng.save();
             Russian rus = new Russian();
             rus.quote = crus;
-            rus.english = eng;
+            rus.orth = ceng;
             rus.itsCustom = true;
             rus.save();
             recently.add(0, rus);
@@ -154,27 +150,20 @@ class MainActivityPresenter {
         ((TextView)view.findViewById(R.id.et_result)).setText(result);
         dialog.setContentView(view);
         (view.findViewById(R.id.btn_positive)).setOnClickListener(view1 -> {
-            English eng = new English();
             Russian rus = new Russian();
             if (itsOnline) {
                 if (from.equals(Language.ENGLISH)) {
-                    eng.orth = text;
-                    eng.save();
+                    rus.orth = text;
                     rus.quote = result;
-                    rus.english = eng;
-                    //eng.russian = rus;
-                    //eng.save();
                 } else {
-                    eng.orth = result;
-                    eng.save();
+                    rus.orth = result;
                     rus.quote = text;
-                    rus.english = eng;
                 }
             } else {
                 if (from.equals(Language.ENGLISH)) {
                     rus = Russian.getByQuote(result);
                 } else {
-                    rus = English.getByOrth(text).russian;
+                    rus = Russian.getByOrth(text);
                 }
             }
             rus.itsCustom = true;
@@ -211,7 +200,7 @@ class MainActivityPresenter {
             List<Russian> filteredModelList = new ArrayList<>();
 
                 if (query.charAt(0) <= Byte.MAX_VALUE)
-                    filteredModelList = Russian.findEng(query);
+                    filteredModelList = Russian.findEnglish(query);
             else filteredModelList = Russian.find(query);
 
 

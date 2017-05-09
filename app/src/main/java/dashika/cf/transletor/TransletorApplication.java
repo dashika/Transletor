@@ -3,20 +3,18 @@ package dashika.cf.transletor;
 import android.app.Application;
 
 import com.activeandroid.ActiveAndroid;
+import com.activeandroid.Configuration;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.GsonBuilder;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 import dashika.cf.transletor.API.ITransletor;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import static javax.xml.transform.OutputKeys.ENCODING;
 
 /**
  * Created by programer on 17.02.17.
@@ -61,7 +59,9 @@ public class TransletorApplication extends Application {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        ActiveAndroid.initialize(this);
+        // ActiveAndroid.initialize(this);
+
+        createDatabase();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(YANDEX_BASE_URL)
@@ -73,6 +73,12 @@ public class TransletorApplication extends Application {
                 .build();
 
         iTransletor = retrofit.create(ITransletor.class);
+
+    }
+
+    private void createDatabase() {
+        Configuration dbConfiguration = new Configuration.Builder(this).setDatabaseName("transletor.db").create();
+        ActiveAndroid.initialize(dbConfiguration);
 
     }
 

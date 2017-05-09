@@ -12,14 +12,30 @@ import java.util.List;
 /**
  * Created by programer on 17.02.17.
  */
-@Table(name = "Russian", id = "_id")
+@Table(name = "Transletor", id = "_id")
 public class Russian extends Model {
-    @Column(name = "fEnglish", onUpdate = Column.ForeignKeyAction.CASCADE, onDelete = Column.ForeignKeyAction.CASCADE)
-    public English english;
-    @Column(name = "Quote", notNull = true)
+    @Column(name = "quote", notNull = true)
     public String quote = "";
     @Column(name = "itsCustom")
     public boolean itsCustom;
+    @Column(name = "orth", notNull = true)
+    public String orth = "";
+    @Column(name = "pron")
+    public String pron = "";
+
+    public static List<Russian> findEnglish(String str) {
+        return new Select()
+                .from(Russian.class)
+                .where("orth like ?", ('%'+str+'%'))
+                .execute();
+    }
+
+    public static Russian getByOrth(String orth) {
+        return new Select()
+                .from(Russian.class)
+                .where("orth=?", orth)
+                .executeSingle();
+    }
 
     public Russian() {
         super();
@@ -46,31 +62,6 @@ public class Russian extends Model {
                 .execute();
     }
 
-    public static List<Russian> findEng(String str) {
-        try {
-            List<English> englishes = English.find(str);
-            String[] strings = new String[englishes.size()];
-            int ie = 0;
-            for (English english : englishes) {
-                strings[ie++] = english.getId().toString();
-            }
-            Character[] placeholdersArray = new Character[englishes.size()];
-            for (int i = 0; i < englishes.size(); i++) {
-                placeholdersArray[i] = '?';
-            }
-
-            String placeholders = TextUtils.join(",", placeholdersArray);
-
-
-            return new Select()
-                    .from(Russian.class)
-                    .where("fEnglish in (" + placeholders + ")", strings)
-                    .execute();
-        } catch (Exception e) {
-            return getMy();
-        }
-    }
-
     public static Russian getByQuote(String quote) {
         return new Select()
                 .from(Russian.class)
@@ -83,8 +74,4 @@ public class Russian extends Model {
         return new Select().from(Russian.class).count();
     }
 
-
-    public List<English> fEnglish() {
-        return getMany(English.class, "fEnglish");
-    }
 }

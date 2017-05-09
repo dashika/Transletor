@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.activeandroid.ActiveAndroid;
 import com.google.firebase.database.DataSnapshot;
@@ -13,7 +12,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,9 +22,7 @@ import java.io.InputStream;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import dashika.cf.transletor.Model.English;
 import dashika.cf.transletor.Model.Russian;
 import dashika.cf.transletor.R;
 import dashika.cf.transletor.TransletorApplication;
@@ -38,6 +34,7 @@ import dashika.cf.transletor.TransletorApplication;
 
 public class InitDB extends AsyncTask<Void, Integer, Void> {
 
+    List<Russian> result1 = new ArrayList<>();
     private Context context;
     private static final String TAG = "Init DB";
     private int id = 1;
@@ -45,8 +42,7 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
     private NotificationCompat.Builder mBuilder;
     private TaskDelegateInitDB taskDelegateInitDB;
 
-    public InitDB(Context context, TaskDelegateInitDB taskDelegateInitDB)
-    {
+    public InitDB(Context context, TaskDelegateInitDB taskDelegateInitDB) {
         this.context = context;
         this.taskDelegateInitDB = taskDelegateInitDB;
     }
@@ -67,9 +63,24 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
         super.onProgressUpdate(progress);
         mBuilder.setProgress(100, progress[0], false);
         mNotifyManager.notify(id, mBuilder.build());
-        if(progress[0] > 50)
-        taskDelegateInitDB.GetResult(null);
 
+        if (progress[0] == 100) {
+            ActiveAndroid.beginTransaction();
+            try {
+                for (Russian russian : result1) {
+                    russian.save();
+                }
+                ActiveAndroid.setTransactionSuccessful();
+            } finally {
+                ActiveAndroid.endTransaction();
+
+            }
+
+            mBuilder.setContentText(context.getString(R.string.download_complite))
+                    .setProgress(0, 0, false);
+            mNotifyManager.notify(id, mBuilder.build());
+            taskDelegateInitDB.GetResult(null);
+        }
     }
 
     @Override
@@ -80,107 +91,19 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
 
     @Override
     protected Void doInBackground(Void... voids) {
-     /*  try {
-            JSONObject obj = new JSONObject(loadJSONFromAsset());
-            JSONArray m_jArry = obj.getJSONArray("entry");
-            long totalDatas = m_jArry.length();
-            for (int i = 0; i < totalDatas; i++) {
-                JSONObject jo_inside = m_jArry.getJSONObject(i);
-
-                publishProgress((int) ((i / (float) totalDatas) * 100));
-
-                JSONObject form = jo_inside.getJSONObject("form");
-                English eng = new English();
-                eng.orth = form.getString("orth");
-                try {
-                    eng.pron = form.getString("pron");
-                } catch (JSONException ignore) {
-                }
-                try {
-                    eng.save();
-                    Log.v(TAG, "Insert eng " + i + " " + eng.orth);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    continue;
-                }
-
-                if((jo_inside.get("sense")) instanceof JSONObject)
-                {
-                    try {
-                        if((jo_inside.getJSONObject("sense")).get("cit") instanceof JSONObject) {
-                            JSONObject cit = (jo_inside.getJSONObject("sense")).getJSONObject("cit");
-                            InsertRus(cit,eng);
-                        }
-                        else {
-                            JSONArray sense = (jo_inside.getJSONObject("sense")).getJSONArray("cit");
-                            for (int j = 0; j < sense.length(); j++) {
-                                InsertRus(sense.getJSONObject(j), eng);
-                            }
-                        }
-                    }catch (JSONException e){
-                        e.printStackTrace();
-                    }
-                }
-                else if((jo_inside.get("sense")) instanceof JSONArray)
-                {
-                    JSONArray sense = (jo_inside.getJSONArray("sense"));
-                    for (int j = 0; j < sense.length(); j++) {
-                        try {
-                            JSONObject jcit = sense.getJSONObject(j);
-                            if(jcit.get("cit") instanceof JSONObject){
-                                InsertRus( jcit.getJSONObject("cit"),eng);
-                            }
-                            else {
-                                JSONArray cits = jcit.getJSONArray("cit");
-                                for (int jj = 0; jj < cits.length(); jj++) {
-                                    InsertRus(cits.getJSONObject(jj), eng);
-                                }
-                            }
-                        }catch (JSONException e){
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        TransletorApplication.getmDatabase().child("default").setValue(Russian.getAll());
-*/
-
-        GetWords(TransletorApplication.getUser().getUid(), result -> {
-            ActiveAndroid.beginTransaction();
-            try {
-                for (Russian russian : result) {
-                    russian.english.save();
-                    russian.save();
-                }
-                ActiveAndroid.setTransactionSuccessful();
-            }
-            finally {
-                ActiveAndroid.endTransaction();
+        GetWords(context.getString(R.string.admin), result -> {
+                this.result1.addAll(result);
                 publishProgress(50);
 
-            }
-            GetWords("default", result1 -> {
-                ActiveAndroid.beginTransaction();
-                try {
-                    for (Russian russian : result1) {
-                        russian.english.save();
-                        russian.save();
-                    }
-                    ActiveAndroid.setTransactionSuccessful();
-                }
-                finally {
-                    ActiveAndroid.endTransaction();
-                    publishProgress(100);
-                    mBuilder.setContentText(context.getString(R.string.download_complite))
-                            .setProgress(0,0,false);
-                    mNotifyManager.notify(id, mBuilder.build());
 
-                }
-            });
+            if (!TransletorApplication.getUser().getUid().equals(context.getString(R.string.admin))) {
+                GetWords(TransletorApplication.getUser().getUid(), result1 -> {
+                    this.result1.addAll(result1);
+                    publishProgress(100);
+                });
+            } else {
+                publishProgress(100);
+            }
 
         });
 
@@ -188,8 +111,7 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
         return null;
     }
 
-    private void GetWords(String key, TaskDelegateInitDB taskDelegateInitDB)
-    {
+    private void GetWords(String key, TaskDelegateInitDB taskDelegateInitDB) {
         List<Russian> russianList = new ArrayList<>();
         TransletorApplication.getmDatabase().child(key).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -200,14 +122,16 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
                     Gson gson = builder.create();
                     String jsonString = gson.toJson(dataSnapshot.getValue());
 
-                    try{
+                    try {
                         JSONObject str = new JSONObject(jsonString);
                         Russian obj = gson.fromJson(str.toString(), Russian.class);
-                        // obj.english.save();
-                        // obj.save();
+                        if (obj.orth.isEmpty()) {
+                            Russian objOld = gson.fromJson(str.get("english").toString(), Russian.class);
+                            obj.orth = objOld.orth;
+                            obj.pron = objOld.pron;
+                        }
                         russianList.add(obj);
-                    }
-                    catch (JSONException ignore){
+                    } catch (JSONException ignore) {
                         ignore.printStackTrace();
                         JSONArray jsonArray = new JSONArray(jsonString);
 
@@ -215,15 +139,17 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
                             JSONObject str = jsonArray.getJSONObject(i);
                             Log.d("jsonObject", str.toString());
                             Russian obj = gson.fromJson(str.toString(), Russian.class);
-                            // obj.english.save();
-                            // obj.save();
+                            if (obj.orth.isEmpty()) {
+                                Russian objOld = gson.fromJson(jsonArray.getJSONObject(i).get("english").toString(), Russian.class);
+                                obj.orth = objOld.orth;
+                                obj.pron = objOld.pron;
+                            }
                             russianList.add(obj);
                         }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                }
-                finally {
+                } finally {
                     taskDelegateInitDB.GetResult(russianList);
                 }
             }
@@ -236,10 +162,9 @@ public class InitDB extends AsyncTask<Void, Integer, Void> {
     }
 
 
-    public void InsertRus(JSONObject cit, English eng) throws JSONException {
+    public void InsertRus(JSONObject cit) throws JSONException {
         Russian rus = new Russian();
         rus.quote = cit.getString("quote");
-        rus.english = eng;
         try {
             rus.save();
             Log.v(TAG, "Insert rus " + rus.quote);

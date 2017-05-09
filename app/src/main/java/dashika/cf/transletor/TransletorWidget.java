@@ -50,7 +50,7 @@ public class TransletorWidget extends AppWidgetProvider {
         RemoteViews widgetView = new RemoteViews(context.getPackageName(), R.layout.widget);
         if(russianList.size()<2)return;
         Russian rus = russianList.get(new Random().nextInt(russianList.size()-1));
-        widgetView.setTextViewText(R.id.tvEng, rus.english.orth);
+        widgetView.setTextViewText(R.id.tvEng, rus.orth);
         widgetView.setTextViewText(R.id.tvRus, rus.quote);
 
         Intent intent = new Intent(context, ServiceDialog.class);

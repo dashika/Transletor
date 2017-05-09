@@ -20,7 +20,6 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
-import dashika.cf.transletor.Model.English;
 import dashika.cf.transletor.Model.Russian;
 import dashika.cf.transletor.Util.Language;
 
@@ -124,10 +123,10 @@ public class MainActivity extends BaseActivity implements SearchView.OnQueryText
         else {
             try {
                 if (notCyrillic) {
-                    String res = English.getByOrth(query).russian.quote;
+                    String res = Russian.getByOrth(query).quote;
                     mainActivityPresenter.showDialog(MainActivity.this,Language.ENGLISH, query, res, false);
                 } else {
-                    String res = Russian.getByQuote(query).english.orth;
+                    String res = Russian.getByQuote(query).orth;
                     mainActivityPresenter.showDialog(MainActivity.this,Language.RUSSIAN, query, res, false);
                 }
             } catch (NullPointerException e) {

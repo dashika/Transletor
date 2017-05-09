@@ -48,7 +48,7 @@ public class TranslatorListAdapter extends RecyclerView.Adapter<TranslatorListAd
 
     @Override
     public void onBindViewHolder(WordViewHolder personViewHolder, int i) {
-        personViewHolder.textViewEng.setText(words.get(i).english.orth);
+        personViewHolder.textViewEng.setText(words.get(i).orth);
         personViewHolder.textViewRus.setText(words.get(i).quote);
         personViewHolder.itemView.setTag(words.get(i).getId());
         personViewHolder.textViewEng.setOnClickListener(new View.OnClickListener() {

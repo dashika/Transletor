@@ -27,7 +27,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import dashika.cf.transletor.Model.English;
 import dashika.cf.transletor.Model.Russian;
 import dashika.cf.transletor.Util.Language;
 import dashika.cf.transletor.Util.NetworkStateReceiver;
@@ -183,10 +182,10 @@ public class ServiceDialog extends Activity implements NetworkStateReceiver.Netw
         else {
             try {
                 if (notCyrillic) {
-                    String res = English.getByOrth(query).russian.quote;
+                    String res = Russian.getByOrth(query).quote;
                     mainActivityPresenter.showDialog(ServiceDialog.this,Language.ENGLISH, query, res, false);
                 } else {
-                    String res = Russian.getByQuote(query).english.orth;
+                    String res = Russian.getByQuote(query).orth;
                     mainActivityPresenter.showDialog(ServiceDialog.this,Language.RUSSIAN, query, res, false);
                 }
             } catch (NullPointerException e) {
